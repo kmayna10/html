@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books Unlimited!</title>
+    <meta charset="UTF-8" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="Content">
+        <header>
+            <span>Books Unlimited!</span>
+            <nav id="Menu">
+              <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="browse.php">Browse</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li><!-- ADD LINKS TO ADDITIONAL PAGES HERE-->
+              </ul>
+            </nav>
+        </header>
+        <div id="PageContent">
+
+<!-- TASK 2: COMBINE DATA MASHUPS (JSON DATA) -->
+<!-- FOLLOW THE EXAMPLES BELOW, AND MODIFY THIS PAGE TO DISPLAY ADDITIONAL DATA FROM THE CATALOG.JSON FILE -->
+
+<!-- STEP 1: EDIT DATA/CATALOG.JSON BY ADDING ADDITIONAL ATTRIBUTES AND RECORDS -->
+
+<section id="Browse">
+  <h1>Books Unlimited's Weekly Bestseller List</h1>
+  <table id="Books">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<script>
+  $(document).ready(function () {
+    $.get('data/catalog.json', function (data) {
+
+      //if using an older browser, parse the data
+      //var data = JSON.parse(json);
+
+      $.each(data.catalog, function (index, book) {
+        var bookHtml = '';
+        bookHtml += '<tr>';
+        bookHtml += '<td><a href="book.php?isbn=' + book.isbn + '">' + book.title + '</a></td>';
+        bookHtml += '<td>' + book.author + '</td>';
+        bookHtml += '<td>' + book.isbn + '</td>';
+        bookHtml += '</tr>';
+
+        $('#Books tbody').append(bookHtml);
+      });
+    });
+  });
+</script>
+
+</div>
+<footer>
+  <span>Treat your shelf!</span>
+</footer>
+</div>
+</body>
+</html>
+
