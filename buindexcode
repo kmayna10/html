@@ -1,0 +1,64 @@
+<!-- TASK 1: CONSTRUCT A WEBSITE LAYOUT -->
+
+<meta charset="UTF-8" />
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<!-- STEP 1: EDIT THE HEADER.PHP FILE -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Books Unlimited!</title>
+  <meta charset="UTF-8" />
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+      <div id="Content">
+        <header>
+          <span>Books Unlimited!</span>
+          <nav id="Menu">
+              <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="browse.php">Browse</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+              </ul>
+            </nav>
+        </header>
+        <div id="PageContent">
+        
+<!-- STEP 2: EDIT THE INDEX.PHP FILE -->
+
+<section id="Home">
+  <h1>TREAT YO' SHELF!</h1>
+    <body>
+      <p> <b>At Books Unlimited, we encourage you to treat yourself, and your shelf-- to bestselling books, new releases, and everything in between. </b> </br>
+     <ul>
+<img src ="https://www.personal.kent.edu/~kmayna10/LIS-60511/final/images/bookstore.jpeg" alt="bookstore" height="500" width="auto">
+<br>
+  <b>New York Times Bestselling Fiction titles for the first week of November</b>
+         <li>1. It Starts with Us by Colleen Hoover</li>
+         <li>2. No Plan B by Lee Child and Andrew Child</li>
+         <li>3. It Ends with Us by Colleen Hoover</li>
+         <li>4. The Boys from Biloxi by John Grisham</li>
+         <li>5. Verity by Colleen Hoover</li>
+     </ul> </br>
+   <b>New York Times Bestselling NonFiction titles for the first week of November</b>
+     <ul>
+       <li>1. Radio's Greatest of All Time by Rush Limbaugh</li>
+       <li>2. I'm Glad My Mom Died by Jennette McCurdy</li>
+       <li>3. And There Was Light by John Meacham</li>
+       <li>4. Waypoints by Sam Heughan</li>
+       <li>5. The Body Keeps the Score by Bessel van der Kolk</li>
+   </p>
+ </body>
+</section>
+<footer>
+  <span>Treat your shelf!</span>
+</footer>
+</div>
+</body>
+</html>
+
